@@ -23,8 +23,28 @@ const wat = 55.1;
 
 //cancel case = 변수명 중간에 스페이스가 필요하면 대문자로 써주는 것
 //Array: 여러개의 변수를 하나로 묶은 것
-const something = "Something";
 
-const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", 54, true, "stuff", "lalala" , something];
+//Object를 선언하기 위해서는 { 컬리 브라켓 }을 사용한다
+//실제 객체를 만든다
+//Array를 Object안에 넣어도 상관 없다.
+const nicoInfo = {
+  name: "Nico",
+  age: 33,
+  gender: "Male",
+  isHandsome: true,
+  favMovies: ["Along the gods", "LOTR", "Oldboy"],
+  favFood: [
+    {
+      name: "Kimchi", 
+      fatty:false
+    }, 
+    {
+      name: "Cheese Burger",
+      fatty: "true"
+    }
+  ]
+}
 
-console.log(daysOfWeek);
+//Object를 보기 위해서는 이름 옆에 . 을 붙인다.
+console.log(nicoInfo.favFood[0].fatty);
+
