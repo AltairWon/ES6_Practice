@@ -20,3 +20,11 @@ const wat = 666;
 Float 
 const wat = 55.1;
 */
+
+//cancel case = 변수명 중간에 스페이스가 필요하면 대문자로 써주는 것
+//Array: 여러개의 변수를 하나로 묶은 것
+const something = "Something";
+
+const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", 54, true, "stuff", "lalala" , something];
+
+console.log(daysOfWeek);
