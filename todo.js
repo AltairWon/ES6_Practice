@@ -4,7 +4,20 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = 'toDos';
 
-const toDos = [];
+let toDos = [];
+
+function deleteToDo(event){
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+    //하나의 함수를 실행해 줄 것이다.
+    const cleanToDos = toDos.filter(function(toDo){
+        //li.id = string 이고 toDo.id는 int이기에 parseInt를 사용한다.
+        return toDo.id !== parseInt(li.id);
+    });
+    toDos = cleanToDos
+    saveToDos();
+}
 
 //toDos를 가져와서 로컬에 저장한다.
 function saveToDos(){
@@ -20,6 +33,7 @@ function paintToDo(text){
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     delBtn.innerText = "❌";
+    delBtn.addEventListener("click", deleteToDo);
     //text = submit function에서 온 값
     span.innerText = text;
     //appendChild 뭔가를 그의 father element안에 넣는것
