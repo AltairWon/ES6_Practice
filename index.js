@@ -73,9 +73,22 @@ document.title = "I own you";
 //DOM = Document Object Module
 */
 
+/*
 //addEventListener = event를 활성화 시켜주는 함수
 function handleResize() {
   title.style.color = "blue";
 }
 
 window.addEventListener("click", handleResize);
+*/
+
+//prompt = input을 하게 해주는 함수이지만 오래된 함수이다.
+const age = prompt("How old are you");
+
+if(age > 18 && age < 21) {
+  console.log("you can drink but you should not");
+} else if(age > 21) {
+  console.log("Go Ahead");
+} else {
+  console.log("Too young");
+}
