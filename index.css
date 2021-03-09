@@ -2,7 +2,11 @@ body{
   background-color: #ecf0f1;
 }
 
-h1 {
+.btn {
+  cursor: pointer;
+}
+
+body {
   color: #34495e;
 }
 
