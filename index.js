@@ -65,7 +65,8 @@ console.log(plus)
 */
 
 //getElementById는 html안에 있는 title이라는 id를 찾도록 하는 함수 
-const title = document.getElementById("title");
+const title = document.querySelector("#title");
 title.innerHTML = "Hi! from JS";
-console.log(title);
+title.style.color = "red";
+document.title = "I own you";
 //DOM = Document Object Module
