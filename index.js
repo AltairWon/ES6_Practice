@@ -65,13 +65,7 @@ console.log(plus)
 */
 
 //getElementById는 html안에 있는 title이라는 id를 찾도록 하는 함수 
-/*
-const title = document.querySelector("#title");
-title.innerHTML = "Hi! from JS";
-title.style.color = "red";
-document.title = "I own you";
 //DOM = Document Object Module
-*/
 
 /*
 //addEventListener = event를 활성화 시켜주는 함수
@@ -82,6 +76,7 @@ function handleResize() {
 window.addEventListener("click", handleResize);
 */
 
+/*
 //prompt = input을 하게 해주는 함수이지만 오래된 함수이다.
 const age = prompt("How old are you");
 
@@ -92,3 +87,55 @@ if(age > 18 && age < 21) {
 } else {
   console.log("Too young");
 }
+*/
+
+/*
+const title = document.querySelector("#title");
+
+const BASE_COLOR = "rgb(52, 73, 94)";
+const OTHER_COLOR = "#7f8c8d";
+
+function handleClick() {
+  const currentColor = title.style.color;
+  if(currentColor === BASE_COLOR) {
+    title.style.color = OTHER_COLOR;
+  } else {
+    title.style.color = BASE_COLOR
+  }
+}
+
+function init() {
+  title.style.color = BASE_COLOR
+  title.addEventListener("click", handleClick);
+}
+
+init();
+
+function handleOffline() {
+  console.log("lalalal");
+}
+function handleOnline() {
+  console.log("Welcome back");
+}
+
+window.addEventListener("offline", handleOffline)
+window.addEventListener("online", handleOnline)
+*/
+const title = document.querySelector("#title");
+
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+  const hasClass = title.classList.contains(CLICKED_CLASS);
+  if (!hasClass) {
+    title.classList.add(CLICKED_CLASS);
+  } else {
+    title.classList.remove(CLICKED_CLASS);
+  }
+}
+
+function init() {
+  title.addEventListener("click", handleClick);
+}
+
+init();
